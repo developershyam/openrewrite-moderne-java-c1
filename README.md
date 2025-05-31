@@ -17,7 +17,7 @@ gradle build
 # Build LST
 mod build .
 
-# Try in build recipe
+# Test build-in recipe
 #https://github.com/openrewrite/rewrite-spring/blob/main/src/main/resources/META-INF/rewrite/replace-methods-rest-template-builder.yml
 mod config recipes jar install org.openrewrite.recipe:rewrite-spring:6.8.2
 #Declarative
@@ -26,7 +26,7 @@ mod run . --recipe org.openrewrite.java.spring.boot3.ReplaceRestTemplateBuilderM
 mod run . --recipe org.openrewrite.java.spring.boot3.ReplaceRestTemplateBuilderRequestFactoryMethod
 
 
-# Try custom recipe
+# Test custom recipe
 # one or more recipe can be installed 
 mod config recipes jar install com.mysample:openrewrite-java-r1:1.0.0
 # Run independent recipe using imerative recipe
