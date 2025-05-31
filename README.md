@@ -14,12 +14,26 @@ Create auth token and configure using commands.
 ```bash
 gradle build
 
-# one or more recipe can be installed 
-mod config recipes jar install com.mysample:openrewrite-java-r1:1.0.0
-
+# Build LST
 mod build .
 
+# Try in build recipe
+#https://github.com/openrewrite/rewrite-spring/blob/main/src/main/resources/META-INF/rewrite/replace-methods-rest-template-builder.yml
+mod config recipes jar install org.openrewrite.recipe:rewrite-spring:6.8.2
+#Declarative
+mod run . --recipe org.openrewrite.java.spring.boot3.ReplaceRestTemplateBuilderMethods
+# imperative
+mod run . --recipe org.openrewrite.java.spring.boot3.ReplaceRestTemplateBuilderRequestFactoryMethod
+
+
+# Try custom recipe
+# one or more recipe can be installed 
+mod config recipes jar install com.mysample:openrewrite-java-r1:1.0.0
+# Run independent recipe using imerative recipe
 mod run . --recipe com.sample.r1.MethodAddRecipe
+#Run recipe using declarative way
+mod run . --recipe  com.sample.MyTestRecipe11
+
 
 ```
 # What to do next
