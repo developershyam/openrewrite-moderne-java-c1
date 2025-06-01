@@ -10,6 +10,9 @@ https://docs.moderne.io/user-documentation/moderne-cli/getting-started/cli-intro
 Create account https://app.moderne.io/
 Download `mod` and add to system `path`
 Create auth token and configure using commands.
+```bash
+mod config moderne edit --token token-value
+```
 
 ```bash
 gradle build
@@ -46,3 +49,5 @@ mod run . --recipe  com.sample.MyTestRecipe11
     > Run mod git apply . --recipe-run 20250531144111-IcXk3 to apply the changes
     > Run mod log runs add . logs.zip --last-run to aggregate run logs
 
+# Hard cache delete for particular recipe or group or all
+-  user-home\.moderne\cli\maven-cache\ 
