@@ -15,10 +15,13 @@ mod config moderne edit --token token-value
 ```
 
 ```bash
-gradle build
+gradle clean build
 
 # Build LST
 mod build .
+
+# Note: if you are getting error for "mod build ." gradle version not found, use to generate gradle wrapper & re-try.
+# gradle wrapper
 
 # Test build-in recipe
 #https://github.com/openrewrite/rewrite-spring/blob/main/src/main/resources/META-INF/rewrite/replace-methods-rest-template-builder.yml
@@ -35,10 +38,14 @@ mod config recipes jar install com.mysample:openrewrite-java-r1:1.0.0
 # Run independent recipe using imerative recipe
 mod run . --recipe com.sample.r1.MethodAddRecipe
 #Run recipe using declarative way
-mod run . --recipe  com.sample.MyTestRecipe11
+mod run . --recipe  com.sample.r1.MyYAMLRecipe
 
 
 ```
+
+
+
+
 # What to do next
     > Click on one of the patch links above to view the changes on a particular repository
     > Run mod study to examine the following data tables produced by this recipe:

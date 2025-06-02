@@ -1,5 +1,5 @@
 package com.sample;
-class FooBar {
+class User {
 
 
     void baz(String input1, int input2) {
@@ -14,8 +14,6 @@ class FooBar {
     public static void oldMethodName(){
 
     }
-
-    
 
 }
 
