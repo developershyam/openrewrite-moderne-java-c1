@@ -22,6 +22,7 @@ mod build .
 
 # Note: if you are getting error for "mod build ." gradle version not found, use to generate gradle wrapper & re-try.
 # gradle wrapper
+# It is working in 3.32 but error in 3.41
 
 # Test build-in recipe
 #https://github.com/openrewrite/rewrite-spring/blob/main/src/main/resources/META-INF/rewrite/replace-methods-rest-template-builder.yml
