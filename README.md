@@ -58,3 +58,25 @@ mod run . --recipe  com.sample.r1.MyYAMLRecipe
 
 # Hard cache delete for particular recipe or group or all
 -  user-home\.moderne\cli\maven-cache\ 
+
+
+# DevCenter setup in local start with new folder don't do in this clone repo
+```bash
+
+mkdir my-dashboard-demo
+cd my-dashboard-demo
+echo cloneUrl,branch > myrepo.csv
+#Update file with content git url and branch name
+#https://github.com/developershyam/openrewrite-moderne-java-c1.git
+#main
+mod git clone csv devcenter-demo myrepo.csv
+# Build is working only on mod version 3.32 due to some gradle issue
+mod build devcenter-demo
+
+mod config recipes jar install io.moderne.recipe:rewrite-devcenter:LATEST
+
+mod run devcenter-demo --recipe com.sample.r1.MyYAMLRecipe
+
+mod devcenter devcenter-demo --last-recipe-run
+
+```
