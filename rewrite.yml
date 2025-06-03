@@ -1,0 +1,10 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: com.sample.MyModMethodRecipe
+recipeList:
+  - com.sample.r1.CustomerInfoExpandRecipe
+  - com.sample.r1.MethodAddRecipe:
+      fullyQualifiedClassName: com.sample.User
+      methodName: hello
+  - com.sample.r1.MethodAddWithPramRecipe:
+      fullyQualifiedClassName: com.sample.User
+      methodName: myTestMethod  

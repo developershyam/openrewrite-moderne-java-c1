@@ -41,6 +41,9 @@ mod run . --recipe com.sample.r1.MethodAddRecipe
 #Run recipe using declarative way
 mod run . --recipe  com.sample.r1.MyYAMLRecipe
 
+# Create declarative reciepe and install to CLI
+mod config recipes yaml install rewrite.yml
+mod run . --recipe com.sample.MyModMethodRecipe
 
 ```
 
@@ -79,5 +82,3 @@ mod config recipes jar install io.moderne.recipe:rewrite-devcenter:LATEST
 mod run devcenter-demo --recipe com.sample.r1.MyYAMLRecipe
 
 mod devcenter devcenter-demo --last-recipe-run
-
-```
