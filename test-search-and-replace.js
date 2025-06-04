@@ -6,7 +6,7 @@ const filePath = path.join(__dirname, 'test-data.txt');
 
 const replaceUsingRegx = [
     {
-        "pattern": /to_timestamp\('.*?', '.*?'\)/g,
+        "pattern": /to_timestamp\('.*?','.*?'\)/g,
         "replacement": 'now()'
     },
     {
@@ -25,8 +25,6 @@ fs.readFile(filePath, 'utf8', (err, data) => {
     replaceUsingRegx.forEach(({ pattern, replacement }) => {
         updatedContent = updatedContent.replace(pattern, replacement);
     });
-    // Search and replace using regex
-   // const updatedContent = data.replace(regexPattern, replacement);
 
     // Write the updated content back to the file
     fs.writeFile(filePath, updatedContent, 'utf8', (err) => {

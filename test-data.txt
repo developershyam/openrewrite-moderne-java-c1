@@ -1,7 +1,7 @@
 
 
-insert into mytable('abc' null, to_timestamp('2025-06-1', 'null'), null, 'a3')
+insert into mytable('abc1', null, to_timestamp('2025-06-1','null'), null, 'a1')
 
-insert into mytable('abc' null, to_timestamp('2025-07-1', 'null'), null, 'a3')
+insert into mytable('abc2', null, to_timestamp('2025-07-1','null'), null, 'a2')
 
-insert into mytable('abc' null, to_timestamp('2025-08-1', 'null'), null, 'a3')
+insert into mytable('abc3', null, to_timestamp('2025-08-1','null'), null, 'a3')
