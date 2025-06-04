@@ -4,16 +4,14 @@ const path = require('path');
 // File path
 const filePath = path.join(__dirname, 'test-data.txt');
 
-// Regex pattern to search for the specific timestamp
-const regexPattern = /to_timestamp\('.*?','.*?'\)/g;
-
-// Replacement string
-const replacement = 'now()';
-
 const replaceUsingRegx = [
     {
         "pattern": /to_timestamp\('.*?', '.*?'\)/g,
         "replacement": 'now()'
+    },
+    {
+        "pattern": /null/g,
+        "replacement": '\'TEST\''
     }
 ]
 
