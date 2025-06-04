@@ -1,0 +1,7 @@
+
+
+insert into mytable('abc' now(), 'a3')
+
+insert into mytable('abc' now(), 'a3')
+
+insert into mytable('abc' now(), 'a3')
